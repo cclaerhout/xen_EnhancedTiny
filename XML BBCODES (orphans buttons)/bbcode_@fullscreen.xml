@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bbcode>
+  <tag>@fullscreen</tag>
+  <title>fullscreen</title>
+  <description>Fullscreen</description>
+  <replacement>
+    <begin><![CDATA[#]]></begin>
+    <end><![CDATA[#]]></end>
+  </replacement>
+  <phpcallback>
+    <class></class>
+    <method></method>
+  </phpcallback>
+  <example><![CDATA[#]]></example>
+  <active>1</active>
+  <requiresOption>0</requiresOption>
+  <advancedOptions>0</advancedOptions>
+  <numberOfOptions>1</numberOfOptions>
+  <regex></regex>
+  <trimLeadingLinesAfter>0</trimLeadingLinesAfter>
+  <plainCallback>0</plainCallback>
+  <plainChildren>0</plainChildren>
+  <stopSmilies>0</stopSmilies>
+  <stopLineBreakConversion>0</stopLineBreakConversion>
+  <hasButton>1</hasButton>
+  <button_has_usr>0</button_has_usr>
+  <button_usr>a:0:{}</button_usr>
+  <killCmd>1</killCmd>
+  <custCmd>fullscreen</custCmd>
+  <imgMethod>Direct</imgMethod>
+  <buttonDesc></buttonDesc>
+  <tagOptions></tagOptions>
+  <tagContent></tagContent>
+</bbcode>

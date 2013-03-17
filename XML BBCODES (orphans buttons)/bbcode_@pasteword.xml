@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bbcode>
+  <tag>@pasteword</tag>
+  <title>Pasteword</title>
+  <description>TinyMCE Paste Word</description>
+  <replacement>
+    <begin><![CDATA[#]]></begin>
+    <end><![CDATA[#]]></end>
+  </replacement>
+  <phpcallback>
+    <class/>
+    <method/>
+  </phpcallback>
+  <example><![CDATA[#]]></example>
+  <active>1</active>
+  <requiresOption>0</requiresOption>
+  <advancedOptions>0</advancedOptions>
+  <numberOfOptions>1</numberOfOptions>
+  <regex/>
+  <trimLeadingLinesAfter>0</trimLeadingLinesAfter>
+  <plainCallback>0</plainCallback>
+  <plainChildren>0</plainChildren>
+  <stopSmilies>0</stopSmilies>
+  <stopLineBreakConversion>0</stopLineBreakConversion>
+  <stopAutoLink>none</stopAutoLink>
+  <hasButton>1</hasButton>
+  <button_has_usr>0</button_has_usr>
+  <button_usr>a:0:{}</button_usr>
+  <killCmd>1</killCmd>
+  <custCmd>pasteword</custCmd>
+  <imgMethod>Direct</imgMethod>
+  <buttonDesc/>
+  <tagOptions/>
+  <tagContent/>
+</bbcode>

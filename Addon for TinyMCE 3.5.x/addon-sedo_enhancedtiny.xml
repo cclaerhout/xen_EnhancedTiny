@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="sedo_enhancedtiny" title="TinyMCE Enhancements" version_string="1.2" version_id="2" url="http://xenforo.com/community/resources/tinymce-enhancements.1219/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="template_create" execute_order="10" callback_class="Sedo_EnhancedTiny_Listener_Preloader" callback_method="preloader" active="1" description="Templates preloader"/>
+    <listener event_id="template_hook" execute_order="10" callback_class="Sedo_EnhancedTiny_Listener_Templates" callback_method="listenhooks" active="1" description="Templates Hooks"/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <optiongroups>
+    <group group_id="sedo_enhancedtiny" display_order="9999" debug_only="0"/>
+    <option option_id="enhancedtiny_autosave" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="400"/>
+    </option>
+    <option option_id="enhancedtiny_autosave_ask_before_unload" edit_format="radio" data_type="boolean" can_backup="1">
+      <default_value>1</default_value>
+      <edit_format_params>1={xen:phrase enhancedtiny_yes}
+0={xen:phrase enhancedtiny_no}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="450"/>
+    </option>
+    <option option_id="enhancedtiny_autosave_display_in_statusbar" edit_format="radio" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params>1={xen:phrase enhancedtiny_yes}
+0={xen:phrase enhancedtiny_no}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="460"/>
+    </option>
+    <option option_id="enhancedtiny_autosave_interval" edit_format="spinbox" data_type="positive_integer" can_backup="1">
+      <default_value>45</default_value>
+      <edit_format_params>min=10
+step=1</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="410"/>
+    </option>
+    <option option_id="enhancedtiny_autosave_minlength" edit_format="spinbox" data_type="positive_integer" can_backup="1">
+      <default_value>50</default_value>
+      <edit_format_params>min=10
+step=1</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="420"/>
+    </option>
+    <option option_id="enhancedtiny_autosave_retention" edit_format="spinbox" data_type="positive_integer" can_backup="1">
+      <default_value>20</default_value>
+      <edit_format_params>min=5
+step=5</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="430"/>
+    </option>
+    <option option_id="enhancedtiny_fullscreen" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="300"/>
+    </option>
+    <option option_id="enhancedtiny_paste" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="500"/>
+    </option>
+    <option option_id="enhancedtiny_paste_convert_middot_lists" edit_format="radio" data_type="boolean" can_backup="1">
+      <default_value>1</default_value>
+      <edit_format_params>1={xen:phrase enhancedtiny_yes}
+0={xen:phrase enhancedtiny_no}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="540"/>
+    </option>
+    <option option_id="enhancedtiny_paste_remove_styles_if_webkit" edit_format="radio" data_type="boolean" can_backup="1">
+      <default_value>1</default_value>
+      <edit_format_params>1={xen:phrase enhancedtiny_yes}
+0={xen:phrase enhancedtiny_no}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="550"/>
+    </option>
+    <option option_id="enhancedtiny_paste_retain_style_properties" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="530"/>
+    </option>
+    <option option_id="enhancedtiny_paste_text_sticky" edit_format="radio" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params>1={xen:phrase enhancedtiny_yes}
+0={xen:phrase enhancedtiny_no}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="510"/>
+    </option>
+    <option option_id="enhancedtiny_paste_text_sticky_default" edit_format="radio" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params>1={xen:phrase enhancedtiny_yes}
+0={xen:phrase enhancedtiny_no}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="520"/>
+    </option>
+    <option option_id="enhancedtiny_statusbar" edit_format="select" data_type="string" can_backup="1">
+      <default_value>none</default_value>
+      <edit_format_params>none={xen:phrase enhanced_tiny_options_statusbar_none}
+bottom={xen:phrase enhanced_tiny_options_statusbar_bottom}
+top={xen:phrase enhanced_tiny_options_statusbar_top}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="100"/>
+    </option>
+    <option option_id="enhancedtiny_statusbar_hidehtmlpath" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>1</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="110"/>
+    </option>
+    <option option_id="enhancedtiny_toolbar" edit_format="select" data_type="string" can_backup="1">
+      <default_value>top</default_value>
+      <edit_format_params>top={xen:phrase enhancedtiny_toolbar_top}
+bottom={xen:phrase enhancedtiny_toolbar_bottom}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="1"/>
+    </option>
+    <option option_id="enhancedtiny_toolbar_align" edit_format="select" data_type="string" can_backup="1">
+      <default_value>left</default_value>
+      <edit_format_params>left={xen:phrase enhancedtiny_toolbar_align_left}
+center={xen:phrase enhancedtiny_toolbar_align_center}
+right={xen:phrase enhancedtiny_toolbar_align_right}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="20"/>
+    </option>
+    <option option_id="enhancedtiny_wordcount" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="200"/>
+    </option>
+    <option option_id="enhancedtiny_wordcount_align" edit_format="select" data_type="string" can_backup="1">
+      <default_value>right</default_value>
+      <edit_format_params>left={xen:phrase enhancedtiny_align_left}
+right={xen:phrase enhancedtiny_align_right}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="210"/>
+    </option>
+    <option option_id="enhancedtiny_wordcount_custmod_excluderegex" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="291"/>
+    </option>
+    <option option_id="enhancedtiny_wordcount_custmod_matchregex" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="290"/>
+    </option>
+    <option option_id="enhancedtiny_wordcount_mode" edit_format="select" data_type="string" can_backup="1">
+      <default_value>words</default_value>
+      <edit_format_params>words={xen:phrase enhancedtiny_wordcount_words}
+char={xen:phrase enhancedtiny_wordcount_characters}
+charwp={xen:phrase enhancedtiny_wordcount_characterswithwhitespaces}
+cust={xen:phrase enhancedtiny_wordcount_custom}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="220"/>
+    </option>
+    <option option_id="enhancedtiny_wordcount_update_on_delete" edit_format="radio" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params>1={xen:phrase enhancedtiny_yes}
+0={xen:phrase enhancedtiny_no}</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="240"/>
+    </option>
+    <option option_id="enhancedtiny_wordcount_update_rate" edit_format="spinbox" data_type="positive_integer" can_backup="1">
+      <default_value>2000</default_value>
+      <edit_format_params>min=0
+step=100</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="sedo_enhancedtiny" display_order="230"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="enhancedtiny_align_left" version_id="0" version_string="1"><![CDATA[Left Align]]></phrase>
+    <phrase title="enhancedtiny_align_right" version_id="0" version_string="1"><![CDATA[Right Align]]></phrase>
+    <phrase title="enhancedtiny_no" version_id="0" version_string="1"><![CDATA[No]]></phrase>
+    <phrase title="enhancedtiny_toolbar_align_center" version_id="0" version_string="1"><![CDATA[Center align]]></phrase>
+    <phrase title="enhancedtiny_toolbar_align_left" version_id="0" version_string="1"><![CDATA[Left align (default)]]></phrase>
+    <phrase title="enhancedtiny_toolbar_align_right" version_id="0" version_string="1"><![CDATA[Right align]]></phrase>
+    <phrase title="enhancedtiny_toolbar_bottom" version_id="0" version_string="1"><![CDATA[At the bottom]]></phrase>
+    <phrase title="enhancedtiny_toolbar_top" version_id="0" version_string="1"><![CDATA[At the Top (default)]]></phrase>
+    <phrase title="enhancedtiny_wordcount_characters" version_id="0" version_string="1"><![CDATA[Count each character which is not a white space]]></phrase>
+    <phrase title="enhancedtiny_wordcount_characterswithwhitespaces" version_id="0" version_string="1"><![CDATA[Count each character & white space used with a word]]></phrase>
+    <phrase title="enhancedtiny_wordcount_custom" version_id="0" version_string="1"><![CDATA[Custom Mode]]></phrase>
+    <phrase title="enhancedtiny_wordcount_words" version_id="0" version_string="1"><![CDATA[Count each word (original mode)]]></phrase>
+    <phrase title="enhancedtiny_yes" version_id="0" version_string="1"><![CDATA[Yes]]></phrase>
+    <phrase title="enhanced_tiny_options_statusbar_bottom" version_id="0" version_string="1"><![CDATA[Display at the bottom]]></phrase>
+    <phrase title="enhanced_tiny_options_statusbar_none" version_id="0" version_string="1"><![CDATA[Do not display]]></phrase>
+    <phrase title="enhanced_tiny_options_statusbar_top" version_id="0" version_string="1"><![CDATA[Display at the top]]></phrase>
+    <phrase title="mce_enhancements_paste_dlg_word_title" version_id="1" version_string="1.1"><![CDATA[Use Ctrl+V on your keyboard to paste the text into the window]]></phrase>
+    <phrase title="mce_enhancements_paste_word_desc" version_id="1" version_string="1.1"><![CDATA[Paste from Word]]></phrase>
+    <phrase title="option_enhancedtiny_autosave" version_id="0" version_string="1"><![CDATA[Activate Autosave plugin?]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_ask_before_unload" version_id="0" version_string="1"><![CDATA[Ask before unload?]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_ask_before_unload_explain" version_id="0" version_string="1"><![CDATA[Once activated, this option will display a popup asking the user if he really wants to leave the page whereas the editor is not empty. Default value: <b>Yes</b>]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_display_in_statusbar" version_id="0" version_string="1"><![CDATA[Status bar integration?]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_display_in_statusbar_explain" version_id="0" version_string="1"><![CDATA[Do you want to display to the user that its draft has been saved? Default value: <b>No</b>]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_explain" version_id="0" version_string="1"><![CDATA[Do you want to active the autosave plugin?<br />
+<br />
+You will need to import a orphan button via the <a href="http://xenforo.com/community/resources/custom-bb-code-manager.173/" target="_blank">Bb Codes Manager</a> (the same way you will do it for a Bb Code) and then to insert it inside the Editor with the <b>Buttons Manager</b>.<br />
+<br />
+<span style="text-decoration:underline">Extra information 1</span>: If you have already installed the addon <a href="" target="_blank">Message Auto Save/Drafts</a> of Moman, you don't need to activate this option; actually you will have to choose. I've tried both  autosave methods (on modern browsers), and both seem to work very well.<br />
+<br />
+Their user interface are not exactly the same. With the official TinyMCE plugin, the user needs to click a button to get back its saved text, whereas with Moman's addon the saved text will be automatically displayed when the page is loaded again.<br />
+<br />
+Another difference is the TinyMCE plugin with its 3 methods to save the text seems to be more advanced.<br />
+<br />
+Just choose the method you like the most.<br />
+<br />
+<span style="text-decoration:underline">Extra information 2</span>: when XenForo has been developed the autosave plugin was not included by default inside TinyMCE (it was an external plugin - <a href="http://code.google.com/p/tinyautosave/" target="_blank">see here</a>). Since then it has becoming now an official TinyMCE plugin. This means XenForo doesn't have any icon & css for this button. This addon will automatically deal with that.<br />
+<br />
+The original icons sprite has been modified but not with the one used in the new version of TinyMCE. The reasons are:<br />
+1) The icons sprite of 3.5.x version of TinyMCE is a gif image whereas the sprite used with XenForo is png image<br />
+2) The official restoredraft icon is ugly (especially in gif format)<br />
+<br />
+The author of the selected icon is Dat Nguyen (<a href="http://splashyfish.com/" target="_blank">official website</a>). This icon is free for commercial use.]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_interval" version_id="0" version_string="1"><![CDATA[Autosave interval in seconds]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_interval_explain" version_id="0" version_string="1"><![CDATA[Select here the interval in <b>seconds</b> to autosave the editor draft.<br />
+Default value: <b>45</b> seconds.]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_minlength" version_id="0" version_string="1"><![CDATA[Autosave minimum length]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_minlength_explain" version_id="0" version_string="1"><![CDATA[Select here the minimum length (characters) to execute the autosave function.<br />
+Default value: <b>50</b> characters.]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_retention" version_id="0" version_string="1"><![CDATA[Autosave retention in minutes]]></phrase>
+    <phrase title="option_enhancedtiny_autosave_retention_explain" version_id="0" version_string="1"><![CDATA[Select here the delay of retention of the saved draft in <b>minutes</b>.<br />
+Default value: <b>20</b> minutes.]]></phrase>
+    <phrase title="option_enhancedtiny_fullscreen" version_id="0" version_string="1"><![CDATA[Activate Fullscreen plugin?]]></phrase>
+    <phrase title="option_enhancedtiny_fullscreen_explain" version_id="0" version_string="1"><![CDATA[Do you want to active the fullscreen plugin?<br />
+<br />
+You will need to import a orphan button via the <a href="http://xenforo.com/community/resources/custom-bb-code-manager.173/" target="_blank">Bb Codes Manager</a> (the same way you will do it for a Bb Code) and then to insert it inside the Editor with the <b>Buttons Manager</b>.<br />
+<br />
+<span style="text-decoration:underline">Extra information</span>: this plugin in order to work needs the following file (automatically added): <br />
+<b>js\tinymce\langs\xenforo.js</b><br />
+<br />
+This file is only the English TinyMCE translation file (in TinyMCE format) which has been renamed in "xenforo.js".]]></phrase>
+    <phrase title="option_enhancedtiny_paste" version_id="1" version_string="1.1"><![CDATA[Activate Paste plugin?]]></phrase>
+    <phrase title="option_enhancedtiny_paste_convert_middot_lists" version_id="1" version_string="1.1"><![CDATA[Paste Word - Convert middot lists]]></phrase>
+    <phrase title="option_enhancedtiny_paste_convert_middot_lists_explain" version_id="1" version_string="1.1"><![CDATA[Controls if the paste plugin should try to convert Word lists into semantic XHTML list elements or not.<br />
+Default value: <b>Yes</b><br />
+<br />
+<span style="font-style:italic">After some tests, it appears this option is working nice when set to "Yes" (Test platform: Word 2007/ Firefox/1 level list). The XenForo BbCodes Parser will recognize the list element.</span>]]></phrase>
+    <phrase title="option_enhancedtiny_paste_explain" version_id="1" version_string="1.1"><![CDATA[Do you want to active the autosave plugin?<br />
+<br />
+You will need to import some orphan buttons via the <a href="http://xenforo.com/community/resources/custom-bb-code-manager.173/" target="_blank">Bb Codes Manager</a> (the same way you will do it for a Bb Code) and then to insert it inside the Editor with the <b>Buttons Manager</b>.<br />
+<br />
+<span style="text-decoration:underline">Orphan buttons</span><br />
+- paste text<br />
+- paste word<br />
+- select all<br />
+<br />
+This plugin has many configuration options (<a href="http://www.tinymce.com/wiki.php/Plugin%3apaste" target="_blank">available here</a>). Some of them are available below.]]></phrase>
+    <phrase title="option_enhancedtiny_paste_remove_styles_if_webkit" version_id="1" version_string="1.1"><![CDATA[Remove styles for Webit (Safari, Chrome, etc)]]></phrase>
+    <phrase title="option_enhancedtiny_paste_remove_styles_if_webkit_explain" version_id="1" version_string="1.1"><![CDATA[If true, removes all style information when pasting in WebKit (Safari, Chrome, etc) since it has a serious paste bug.<br />
+Default value: <b>Yes</b><br />
+<br />
+<span style="font-style:italic">After some tests, it appears this option has no effect when set on "No". I let it here since it's already coded.</span>]]></phrase>
+    <phrase title="option_enhancedtiny_paste_retain_style_properties" version_id="1" version_string="1.1"><![CDATA[Paste Word - Retain style properties]]></phrase>
+    <phrase title="option_enhancedtiny_paste_retain_style_properties_explain" version_id="1" version_string="1.1"><![CDATA[Comma separated list of style properties to retain during the paste operation from Word. For example: "<b>font-size,color</b>". If you want to remove all style properties let this field empty or write "<b>none</b>". If you want to keep all style properties, use "<b>all</b>" or "<b>*</b>".<br />
+Default value is empty.]]></phrase>
+    <phrase title="option_enhancedtiny_paste_text_sticky" version_id="1" version_string="1.1"><![CDATA[Paste Text - Feature Sticky]]></phrase>
+    <phrase title="option_enhancedtiny_paste_text_sticky_default" version_id="1" version_string="1.1"><![CDATA[Paste Text - Sticky as Default]]></phrase>
+    <phrase title="option_enhancedtiny_paste_text_sticky_default_explain" version_id="1" version_string="1.1"><![CDATA[This option sets the default state of the paste as plain text button so everything is pasted as plain text if used together with the paste_text_sticky option. <br /> Default value: <b>No</b>]]></phrase>
+    <phrase title="option_enhancedtiny_paste_text_sticky_explain" version_id="1" version_string="1.1"><![CDATA[Keeps Paste Text feature active until user deselects the Paste as Text button. <br /> Default value: <b>No</b>]]></phrase>
+    <phrase title="option_enhancedtiny_statusbar" version_id="0" version_string="1"><![CDATA[TinyMCE status bar]]></phrase>
+    <phrase title="option_enhancedtiny_statusbar_explain" version_id="0" version_string="1"><![CDATA[The TinyMCE status bar can be used  by TinyMCE plugins to give some information.]]></phrase>
+    <phrase title="option_enhancedtiny_statusbar_hidehtmlpath" version_id="0" version_string="1"><![CDATA[Hide "Html Path" information?]]></phrase>
+    <phrase title="option_enhancedtiny_statusbar_hidehtmlpath_explain" version_id="0" version_string="1"><![CDATA[This option will hide the "Html Path" information inside the status bar. On XenForo, the Editor purpose is to work with Bb Codes, so this information will not be very useful (unless if you have always dreamed to have a little "p" displayed at the bottom of your editor).]]></phrase>
+    <phrase title="option_enhancedtiny_toolbar" version_id="0" version_string="1"><![CDATA[TinyMCE toolbar]]></phrase>
+    <phrase title="option_enhancedtiny_toolbar_align" version_id="0" version_string="1"><![CDATA[TinyMCE toolbar align]]></phrase>
+    <phrase title="option_enhancedtiny_toolbar_align_explain" version_id="0" version_string="1"><![CDATA[Choose here how icons should be aligned?]]></phrase>
+    <phrase title="option_enhancedtiny_toolbar_explain" version_id="0" version_string="1"><![CDATA[Where do you want to display the Toolbar (the bar with buttons)?]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount" version_id="0" version_string="1"><![CDATA[Activate Wordcount plugin?]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_align" version_id="0" version_string="1"><![CDATA[WordCount Align]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_align_explain" version_id="0" version_string="1"><![CDATA[Choose here where to place the counter inside the status bar.]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_custmod_excluderegex" version_id="0" version_string="1"><![CDATA[[Custom Mode] Regex to match to avoid to increment the counter]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_custmod_excluderegex_explain" version_id="0" version_string="1"><![CDATA[The Regex format is the one used with <b>Javascript</b>. This Regex will be automatically escaped with PHP (addslashes) before to be used in Javascript.<br/>
+Example (used for words mode): /[0-9.(),;:!?%#$?'"_+=\\/-]*/g]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_custmod_matchregex" version_id="0" version_string="1"><![CDATA[[Custom Mode] Regex to match to increment the counter]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_custmod_matchregex_explain" version_id="0" version_string="1"><![CDATA[The Regex format is the one used with <b>Javascript</b>. This Regex will be automatically escaped with PHP (addslashes) before to be used in Javascript.<br/>
+Example (used for words mode): /[\w\u2019'-]+/g]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_explain" version_id="0" version_string="1"><![CDATA[This TinyMCE plugin will count the words inside the Editor. <br />
+<b>The status bar is required</b>]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_mode" version_id="0" version_string="1"><![CDATA[WordCount Mode]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_mode_explain" version_id="0" version_string="1"><![CDATA[Choose which mode to use. If you're using a language with special characters such as Chinese, Japanese, etc, don't  use the words mode. It will not work.<br />
+<br />
+If you're not satisfied with the actual modes, select the custom mode and specify below which regex to use (you will be on your own to do this). In custom mode, the public text for the counter is set up with this phrase: <b>Sedo_EnhancedTiny_unit_custom</b>]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_update_on_delete" version_id="0" version_string="1"><![CDATA[Update on delete]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_update_on_delete_explain" version_id="0" version_string="1"><![CDATA[Do you want to also update the counter when a word (or a character) is deleted?<br /> 
+<b>Only works with <a href="http://xenforo.com/community/resources/tinymce-fix.1162/" target="_blank">TinyMCE 3.5x</a></b> - Default value is <b>no</b>]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_update_rate" version_id="0" version_string="1"><![CDATA[Update rate]]></phrase>
+    <phrase title="option_enhancedtiny_wordcount_update_rate_explain" version_id="0" version_string="1"><![CDATA[Avoid to put a too low update rate,. it will certainly slow down the editor. <br />
+Default rate is <b>2000</b> (ms).]]></phrase>
+    <phrase title="option_group_sedo_enhancedtiny" version_id="0" version_string="1"><![CDATA[TinyMCE Enhancements]]></phrase>
+    <phrase title="option_group_sedo_enhancedtiny_description" version_id="1" version_string="1.1"><![CDATA[Options to enhance TinyMCE]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_autosave_statusbar_msg" global_cache="1" version_id="0" version_string="1"><![CDATA[draft saved]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_autosave_unload_msg" global_cache="1" version_id="0" version_string="1"><![CDATA[The changes you made inside the Editor will be lost if you navigate away from this page.]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_fullscreen" global_cache="1" version_id="0" version_string="1"><![CDATA[Toggle Full Screen Mode]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_paste_text_desc" global_cache="1" version_id="1" version_string="1.1"><![CDATA[Paste as Plain Text]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_paste_word_desc" global_cache="1" version_id="1" version_string="1.1"><![CDATA[Paste from Word]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_plaintext_mode" global_cache="1" version_id="1" version_string="1.1"><![CDATA[Paste is now in plain text mode. Click again to toggle back to regular paste mode. After you paste something you will be returned to regular paste mode.]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_plaintext_mode_sticky" global_cache="1" version_id="1" version_string="1.1"><![CDATA[Paste is now in plain text mode. Click again to toggle back to regular paste mode.]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_restoredraft" global_cache="1" version_id="0" version_string="1"><![CDATA[Restore auto-saved content]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_restoredraft_warning" global_cache="1" version_id="0" version_string="1"><![CDATA[If you restore the saved content, you will lose all the content that is currently in the editor.\n\nAre you sure you want to restore the saved content?]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_selectall_desc" global_cache="1" version_id="1" version_string="1.1"><![CDATA[Select All]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_unit_Characters" global_cache="1" version_id="0" version_string="1"><![CDATA[Characters: ]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_unit_custom" global_cache="1" version_id="0" version_string="1"><![CDATA[Custom: ]]></phrase>
+    <phrase title="Sedo_EnhancedTiny_Words" global_cache="1" version_id="0" version_string="1"><![CDATA[Words: ]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="editor_dialog_fast_pasteword" version_id="1" version_string="1.1"><![CDATA[<xen:require css="editor_dialog_fast.css" />
+<xen:require css="editor_dialog_pasteword.css" />
+<xen:require js="js/tinymce/themes/xenforo/js/pasteword.js" />
+
+<form method="post" class="section cust_popup">
+	<div class="cust_popup_content">
+		<h1 class="heading cust_heading">{xen:phrase mce_enhancements_paste_word_desc}</h1>
+		<div class="primaryContent">
+			{xen:phrase mce_enhancements_paste_dlg_word_title}
+			<div id="tinymce_paste_iframecontainer"></div>
+		</div>
+
+		<div class="sectionFooter">
+			<div style="float: right">
+				<input type="button" id="cancel" name="cancel" value="{xen:phrase cancel}" class="button close" />
+			</div>
+			<input type="submit" id="insert" name="insert" value="{xen:phrase insert}" class="tinyTrigger button primary" />
+		</div>
+		<input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+	</div>
+</form>]]></template>
+    <template title="editor_dialog_fast_pasteword.css" version_id="1" version_string="1.1"><![CDATA[#tinymce_paste_iframe{
+	width:100%;
+	height:200px;
+}]]></template>
+    <template title="editor_dialog_pasteword" version_id="1" version_string="1.1"><![CDATA[<!DOCTYPE html>
+<html class="editorPopup">
+<head>
+	<title>{xen:phrase Sedo_AdvBBcodeBar_template_article_panel}</title>
+
+	<link rel="stylesheet" href="css.php?css=xenforo,public,form&amp;style={xen:urlencode $_styleId}&amp;d={$visitorStyle.last_modified_date}" />
+	<!--XenForo_Require:CSS-->
+	
+	<xen:include template="page_container_js_head" />
+	<script> jQuery.extend(true, XenForo, { _csrfToken: "{$visitor.csrf_token_page}" }); </script>
+	
+	<xen:require js="js/tinymce/tiny_mce_popup.js" />
+	<xen:require js="js/tinymce/themes/xenforo/js/pasteword.js" />
+	<xen:require css="editor_dialog.css" />
+	<xen:require css="editor_dialog_pasteword.css" />
+
+</head>
+<body id="pasteword">
+
+<form action="{$requestPaths.requestUri}" method="post" onsubmit="PasteWordDialog.insert(); return false;" class="section" name="source">
+	<h1 class="heading">{xen:phrase mce_enhancements_paste_word_desc}</h1>
+
+	<div class="primaryContent">
+		{xen:phrase mce_enhancements_paste_dlg_word_title}
+		<div id="tinymce_paste_iframecontainer"></div>
+	</div>
+
+	<div class="sectionFooter">
+		<div style="float: right">
+			<input type="button" id="cancel" name="cancel" value="{xen:phrase cancel}" class="button" onclick="tinyMCEPopup.close();" />
+		</div>
+		<input type="submit" id="insert" name="insert" value="{xen:phrase insert}" class="button primary" />
+	</div>
+	<input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+
+</form>
+
+</body>
+</html>]]></template>
+    <template title="editor_dialog_pasteword.css" version_id="1" version_string="1.1"><![CDATA[#tinymce_paste_iframe{
+	width:100%;
+	height:200px;
+}]]></template>
+    <template title="sedo_enhanced_tiny" version_id="0" version_string="1"><![CDATA[<xen:require css="sedo_enhanced_tiny.css" />]]></template>
+    <template title="sedo_enhanced_tiny.css" version_id="0" version_string="1"><![CDATA[/* Extra plugins */
+.xenForoSkin span.mce_restoredraft {
+	background-position:-22px -40px
+}
+
+.xenForoSkin .statusbar_autosave {
+	display:none;
+	float:none !important;
+	margin:0 !important;
+	text-align:center;
+	color:#ff8c00;
+}]]></template>
+  </templates>
+  <bb_code_media_sites/>
+  <template_modifications/>
+</addon>

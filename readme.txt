@@ -1,0 +1,1 @@
+A toolbox to tweak TinyMCE with some official plugins: autosave, wordcount, paste & fullscreen. Source: http://xenforo.com/community/resources/tinymce-enhancements.1219/
